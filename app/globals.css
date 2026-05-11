@@ -244,6 +244,13 @@
   .showcase-stage{
     position:relative;z-index:2;display:flex;align-items:center;justify-content:center;
   }
+  .showcase-stage .phone{
+    width:min(360px, 78%);
+  }
+  .showcase-stage .phone-screen{
+    padding:28px 22px 22px;
+    gap:12px;
+  }
 
   /* ====== SERVICES ====== */
   .services{
