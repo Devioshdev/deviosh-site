@@ -101,7 +101,7 @@
     margin:24px 0 24px;
     color:var(--ink);
   }
-  .h1 .word{display:inline-block;overflow:hidden;vertical-align:bottom;padding-right:.18em}
+  .h1 .word{display:inline-block;overflow:visible;vertical-align:baseline;padding-right:.18em;padding-bottom:.08em}
   .h1 .word > span{display:inline-block;transform:translateY(0);transition:transform .9s cubic-bezier(.2,.8,.2,1)}
   .ready .h1 .word > span{transform:translateY(0)}
   .h1 .word:nth-child(1) > span{transition-delay:.05s}
