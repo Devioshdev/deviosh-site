@@ -1,0 +1,10 @@
+html:has(.pfraPage),
+html:has(.pfraPage) body {
+  background: #003087;
+  color: #fff;
+}
+
+html:has(.pfraPage) body::before,
+html:has(.pfraPage) body::after {
+  display: none;
+}
