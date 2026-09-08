@@ -496,7 +496,7 @@
   border: 1px solid rgba(125, 199, 227, 0.38);
   border-radius: 22px 22px 16px 16px;
   padding: 18px 16px 14px;
-  min-height: 216px;
+  min-height: 252px;
   display: flex;
   flex-direction: column;
   backdrop-filter: blur(12px);
@@ -508,9 +508,10 @@
   border-radius: 50%;
   display: grid;
   place-items: center;
-  background: rgba(125, 199, 227, 0.16);
-  color: var(--white);
+  background: rgba(125, 199, 227, 0.88);
+  color: #fff;
   margin-bottom: 16px;
+  flex: 0 0 auto;
 }
 
 .cardIcon svg {
@@ -544,19 +545,29 @@
   max-width: 22ch;
 }
 
+.cardStage {
+  position: relative;
+  flex: 1 1 auto;
+  min-height: 128px;
+  margin-top: 4px;
+}
+
 .cardArt {
   position: absolute;
-  right: -4px;
-  bottom: 22px;
-  width: 136px;
-  height: 76px;
-  color: rgba(125, 199, 227, 0.2);
+  right: 10px;
+  bottom: 8px;
+  display: block;
+  width: 108px;
+  height: 108px;
+  color: rgba(125, 199, 227, 0.42);
   pointer-events: none;
 }
 
 .card footer {
-  margin-top: auto;
-  padding-top: 28px;
+  position: relative;
+  z-index: 1;
+  margin-top: 8px;
+  padding-top: 10px;
   font-size: 11px;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -780,6 +791,21 @@
 
   .cards {
     grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 268px;
+  }
+
+  .cardStage {
+    min-height: 136px;
+  }
+
+  .cardArt {
+    right: 12px;
+    bottom: 10px;
+    width: 116px;
+    height: 116px;
   }
 
   .phoneScore {
