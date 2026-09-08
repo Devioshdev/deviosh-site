@@ -560,8 +560,6 @@
   width: 108px;
   height: 108px;
   color: var(--accent);
-  opacity: 0.38;
-  isolation: isolate;
   pointer-events: none;
 }
 

@@ -21,11 +21,13 @@ export function CardArt({
       preserveAspectRatio="xMidYMid meet"
       aria-hidden="true"
     >
-      <path
-        d={d}
-        fill="currentColor"
-        fillRule={name === "body" ? "evenodd" : "nonzero"}
-      />
+      <g opacity="0.38">
+        <path
+          d={d}
+          fill="currentColor"
+          fillRule={name === "body" ? "evenodd" : "nonzero"}
+        />
+      </g>
     </svg>
   );
 }
