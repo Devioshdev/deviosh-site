@@ -1,9 +1,14 @@
+import Image from "next/image";
 import Link from "next/link";
 import { AppStoreBadge } from "./app-store-badge";
 import { AthleteField } from "./athlete-field";
-import { CardArt } from "./card-art";
 import { PhoneMockup } from "./phone-mockup";
 import { PFRA_PRIVACY_URL } from "@/lib/pfra";
+import scoringBody from "./assets/scoring-body-comp.webp";
+import scoringCardio from "./assets/scoring-cardio.webp";
+import scoringCore from "./assets/scoring-core.webp";
+import scoringRow from "./assets/scoring-row.webp";
+import scoringStrength from "./assets/scoring-strength.webp";
 import styles from "./pfra.module.css";
 
 const scoringCards = [
@@ -12,70 +17,30 @@ const scoringCards = [
     title: "Cardio",
     max: 50,
     events: "2-Mile Run or 20m HAMR",
-    icon: "heart",
+    image: scoringCardio,
   },
   {
     id: "strength",
     title: "Strength",
     max: 15,
     events: "Hand-Release or Standard Push-Ups",
-    icon: "strength",
+    image: scoringStrength,
   },
   {
     id: "core",
     title: "Core",
     max: 15,
     events: "Sit-Ups / Reverse Crunches / Plank",
-    icon: "core",
+    image: scoringCore,
   },
   {
     id: "body",
     title: "Body Comp",
     max: 20,
     events: "WHtR",
-    icon: "tape",
+    image: scoringBody,
   },
 ] as const;
-
-function CardIcon({ name }: { name: (typeof scoringCards)[number]["icon"] }) {
-  if (name === "heart") {
-    return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-        <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10Z" />
-        <path d="M5 12.5h2.6l1.6-2.6 2.2 5 1.6-2.4H19" />
-      </svg>
-    );
-  }
-  if (name === "strength") {
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <rect x="1.5" y="7" width="2.4" height="10" rx="0.8" />
-        <rect x="20.1" y="7" width="2.4" height="10" rx="0.8" />
-        <rect x="4.2" y="8.4" width="2.2" height="7.2" rx="0.6" />
-        <rect x="17.6" y="8.4" width="2.2" height="7.2" rx="0.6" />
-        <rect x="6.4" y="10.4" width="11.2" height="3.2" rx="1.2" />
-      </svg>
-    );
-  }
-  if (name === "core") {
-    return (
-      <svg viewBox="0 0 24 24" fill="currentColor">
-        <circle cx="15.2" cy="5.2" r="2.35" />
-        <path d="M13.8 7.4c-2.4 3.2-6.2 6.8-9.4 8.6l1.6 2c3.4-1.8 6.8-5 8.8-7.8Z" />
-        <path d="M4.4 16.2h8.8v2.1H3.6z" />
-        <path d="M12.4 18.2 14 23l-2.3.7-1.7-4.6z" />
-        <path d="M12.2 9.6 7.2 14.8l1.8 1.4 4.4-4.8z" />
-      </svg>
-    );
-  }
-  return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
-      <path d="M12 3c4 1.4 7 1.2 8 .8v7.4C20 16.2 16.4 19.8 12 21.4 7.6 19.8 4 16.2 4 11.2V3.8c1.2.4 4 .6 8-.8Z" />
-      <circle cx="12" cy="10" r="2" />
-      <path d="M9 16.2c.6-2 1.6-2.8 3-2.8s2.4.8 3 2.8" />
-    </svg>
-  );
-}
 
 export default function PfraTrackerPage() {
   return (
@@ -126,21 +91,36 @@ export default function PfraTrackerPage() {
         <h2 id="scoring-title" className={styles.srOnly}>
           Scoring components
         </h2>
-        {scoringCards.map((card) => (
-          <article className={styles.card} key={card.id}>
-            <div className={styles.cardIcon}>
-              <CardIcon name={card.icon} />
-            </div>
-            <h3>
-              {card.title} <em>Max {card.max}</em>
-            </h3>
-            <p>{card.events}</p>
-            <div className={styles.cardStage} aria-hidden="true">
-              <CardArt name={card.id} />
-            </div>
-            <footer>Max score: {card.max}</footer>
-          </article>
-        ))}
+        <ul className={styles.srOnly}>
+          {scoringCards.map((card) => (
+            <li key={card.id}>
+              {card.title}, max {card.max}. {card.events}.
+            </li>
+          ))}
+        </ul>
+        <div className={styles.cardStrip} aria-hidden="true">
+          <Image
+            src={scoringRow}
+            alt=""
+            className={styles.cardStripImg}
+            sizes="(max-width: 980px) 0px, min(1480px, 92vw)"
+            quality={95}
+            placeholder="blur"
+          />
+        </div>
+        <div className={styles.cardShots} aria-hidden="true">
+          {scoringCards.map((card) => (
+            <Image
+              key={card.id}
+              src={card.image}
+              alt=""
+              className={styles.cardShot}
+              sizes="(max-width: 640px) 92vw, 46vw"
+              quality={95}
+              placeholder="blur"
+            />
+          ))}
+        </div>
       </section>
 
       <section className={styles.rules} aria-labelledby="rules-title">
