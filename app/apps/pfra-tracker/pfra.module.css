@@ -483,95 +483,27 @@
 .cards {
   position: relative;
   z-index: 3;
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 14px;
   padding: 8px 40px 36px;
 }
 
-.card {
-  position: relative;
-  overflow: hidden;
-  background: linear-gradient(180deg, rgba(0, 28, 86, 0.72), rgba(0, 16, 54, 0.78));
-  border: 1px solid rgba(125, 199, 227, 0.38);
-  border-radius: 22px 22px 16px 16px;
-  padding: 18px 16px 14px;
-  min-height: 252px;
-  display: flex;
-  flex-direction: column;
-  backdrop-filter: blur(12px);
-}
-
-.cardIcon {
-  width: 42px;
-  height: 42px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  background: rgba(125, 199, 227, 0.88);
-  color: #fff;
-  margin-bottom: 16px;
-  flex: 0 0 auto;
-}
-
-.cardIcon svg {
-  width: 22px;
-  height: 22px;
-}
-
-.card h3 {
-  font-family: var(--pfra-display), "Manrope", sans-serif;
-  font-style: italic;
-  font-weight: 800;
-  text-transform: uppercase;
-  font-size: 22px;
-  letter-spacing: 0.04em;
-}
-
-.card h3 em {
+.cardStrip {
   display: block;
-  margin-top: 4px;
-  font-style: italic;
-  font-size: 14px;
-  color: var(--accent);
-  font-weight: 700;
 }
 
-.card p {
-  margin-top: 10px;
-  color: rgba(255, 255, 255, 0.84);
-  font-size: 14px;
-  line-height: 1.4;
-  max-width: 22ch;
-}
-
-.cardStage {
-  position: relative;
-  flex: 1 1 auto;
-  min-height: 128px;
-  margin-top: 4px;
-}
-
-.cardArt {
-  position: absolute;
-  right: 10px;
-  bottom: 8px;
+.cardStripImg {
   display: block;
-  width: 108px;
-  height: 108px;
-  color: var(--accent);
-  pointer-events: none;
+  width: 100%;
+  height: auto;
 }
 
-.card footer {
-  position: relative;
-  z-index: 1;
-  margin-top: 8px;
-  padding-top: 10px;
-  font-size: 11px;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: var(--accent);
+.cardShots {
+  display: none;
+}
+
+.cardShot {
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 .kicker {
@@ -747,8 +679,17 @@
   }
 
   .cards {
-    grid-template-columns: 1fr 1fr;
     padding: 0 24px 36px;
+  }
+
+  .cardStrip {
+    display: none;
+  }
+
+  .cardShots {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
   }
 
   .rules,
@@ -789,23 +730,8 @@
     padding-right: 16px;
   }
 
-  .cards {
+  .cardShots {
     grid-template-columns: 1fr;
-  }
-
-  .card {
-    min-height: 268px;
-  }
-
-  .cardStage {
-    min-height: 136px;
-  }
-
-  .cardArt {
-    right: 12px;
-    bottom: 10px;
-    width: 116px;
-    height: 116px;
   }
 
   .phoneScore {
