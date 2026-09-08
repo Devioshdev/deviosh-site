@@ -548,19 +548,18 @@
 .cardStage {
   position: relative;
   flex: 1 1 auto;
-  min-height: 96px;
-  margin-top: 8px;
+  min-height: 128px;
+  margin-top: 4px;
 }
 
 .cardArt {
   position: absolute;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 8px;
   display: block;
-  width: min(148px, 62%);
-  height: 92px;
-  overflow: visible;
-  color: rgba(125, 199, 227, 0.34);
+  width: 108px;
+  height: 108px;
+  color: rgba(125, 199, 227, 0.42);
   pointer-events: none;
 }
 
@@ -799,12 +798,14 @@
   }
 
   .cardStage {
-    min-height: 108px;
+    min-height: 136px;
   }
 
   .cardArt {
-    width: min(168px, 56%);
-    height: 100px;
+    right: 12px;
+    bottom: 10px;
+    width: 116px;
+    height: 116px;
   }
 
   .phoneScore {

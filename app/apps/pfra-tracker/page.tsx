@@ -60,10 +60,11 @@ function CardIcon({ name }: { name: (typeof scoringCards)[number]["icon"] }) {
   if (name === "core") {
     return (
       <svg viewBox="0 0 24 24" fill="currentColor">
-        <ellipse cx="16.2" cy="5.6" rx="2.3" ry="2.4" />
-        <path d="M14.6 8c-2.6 3-6.8 6.6-10.4 8.2l1.4 2.2c3.8-1.6 7.4-4.8 9.4-7.6Z" />
-        <path d="M4.6 16.2h8.6l.7 2H3.8z" />
-        <path d="M12.6 18.2c1.2 1.8 1.5 3.6.6 5.2l-2.2-.7c.6-1 .4-2.2-.4-3.4z" />
+        <circle cx="15.2" cy="5.2" r="2.35" />
+        <path d="M13.8 7.4c-2.4 3.2-6.2 6.8-9.4 8.6l1.6 2c3.4-1.8 6.8-5 8.8-7.8Z" />
+        <path d="M4.4 16.2h8.8v2.1H3.6z" />
+        <path d="M12.4 18.2 14 23l-2.3.7-1.7-4.6z" />
+        <path d="M12.2 9.6 7.2 14.8l1.8 1.4 4.4-4.8z" />
       </svg>
     );
   }
