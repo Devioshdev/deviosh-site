@@ -546,11 +546,11 @@
 
 .cardArt {
   position: absolute;
-  right: -6px;
-  bottom: 28px;
-  width: 118px;
-  height: 66px;
-  color: rgba(8, 22, 56, 0.72);
+  right: -4px;
+  bottom: 22px;
+  width: 136px;
+  height: 76px;
+  color: rgba(125, 199, 227, 0.2);
   pointer-events: none;
 }
 

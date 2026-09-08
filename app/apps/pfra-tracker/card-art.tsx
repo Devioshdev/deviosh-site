@@ -60,7 +60,7 @@ function ShieldBody() {
   return (
     <g transform="translate(36 2)">
       <path d="M44 4c18 6 34 4 40 2v36c0 22-16 38-40 46C20 80 4 64 4 42V6c8 2 22 4 40-2Z" />
-      <g fill="#001428" opacity=".88">
+      <g fill="#001a33" opacity=".92">
         <circle cx="44" cy="28" r="8" />
         <path d="M28 62c2-14 8-20 16-20s14 6 16 20H28Z" />
       </g>
