@@ -104,6 +104,7 @@ export default function PfraTrackerPage() {
             alt=""
             className={styles.cardStripImg}
             sizes="(max-width: 980px) 0px, min(1480px, 92vw)"
+            quality={95}
             placeholder="blur"
           />
         </div>
@@ -115,6 +116,7 @@ export default function PfraTrackerPage() {
               alt=""
               className={styles.cardShot}
               sizes="(max-width: 640px) 92vw, 46vw"
+              quality={95}
               placeholder="blur"
             />
           ))}
