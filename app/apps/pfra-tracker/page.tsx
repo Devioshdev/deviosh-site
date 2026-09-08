@@ -40,29 +40,35 @@ const scoringCards = [
 function CardIcon({ name }: { name: (typeof scoringCards)[number]["icon"] }) {
   if (name === "heart") {
     return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
         <path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2 4 4 0 0 1 7 2c0 5.6-7 10-7 10Z" />
-        <path d="M4 12h3l2-3 3 6 2-3h3" />
+        <path d="M5 12.5h2.6l1.6-2.6 2.2 5 1.6-2.4H19" />
       </svg>
     );
   }
   if (name === "strength") {
     return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <path d="M6 9v6M18 9v6M8 10v4h8v-4M4 10h2v4H4zM18 10h2v4h-2z" />
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <rect x="1.5" y="7" width="2.4" height="10" rx="0.8" />
+        <rect x="20.1" y="7" width="2.4" height="10" rx="0.8" />
+        <rect x="4.2" y="8.4" width="2.2" height="7.2" rx="0.6" />
+        <rect x="17.6" y="8.4" width="2.2" height="7.2" rx="0.6" />
+        <rect x="6.4" y="10.4" width="11.2" height="3.2" rx="1.2" />
       </svg>
     );
   }
   if (name === "core") {
     return (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-        <circle cx="12" cy="6" r="2" />
-        <path d="M8 20l2-8 2 3 2-3 2 8" />
+      <svg viewBox="0 0 24 24" fill="currentColor">
+        <ellipse cx="16.2" cy="5.6" rx="2.3" ry="2.4" />
+        <path d="M14.6 8c-2.6 3-6.8 6.6-10.4 8.2l1.4 2.2c3.8-1.6 7.4-4.8 9.4-7.6Z" />
+        <path d="M4.6 16.2h8.6l.7 2H3.8z" />
+        <path d="M12.6 18.2c1.2 1.8 1.5 3.6.6 5.2l-2.2-.7c.6-1 .4-2.2-.4-3.4z" />
       </svg>
     );
   }
   return (
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
       <path d="M12 3c4 1.4 7 1.2 8 .8v7.4C20 16.2 16.4 19.8 12 21.4 7.6 19.8 4 16.2 4 11.2V3.8c1.2.4 4 .6 8-.8Z" />
       <circle cx="12" cy="10" r="2" />
       <path d="M9 16.2c.6-2 1.6-2.8 3-2.8s2.4.8 3 2.8" />
@@ -128,7 +134,9 @@ export default function PfraTrackerPage() {
               {card.title} <em>Max {card.max}</em>
             </h3>
             <p>{card.events}</p>
-            <CardArt name={card.id} />
+            <div className={styles.cardStage} aria-hidden="true">
+              <CardArt name={card.id} />
+            </div>
             <footer>Max score: {card.max}</footer>
           </article>
         ))}
