@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { AppStoreBadge } from "./app-store-badge";
 import { AthleteField } from "./athlete-field";
+import { CardArt } from "./card-art";
 import { PhoneMockup } from "./phone-mockup";
 import { PFRA_PRIVACY_URL } from "@/lib/pfra";
 import styles from "./pfra.module.css";
@@ -62,8 +63,9 @@ function CardIcon({ name }: { name: (typeof scoringCards)[number]["icon"] }) {
   }
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7">
-      <circle cx="12" cy="12" r="7" />
-      <path d="M12 8v8M9 10h6M9 14h6" />
+      <path d="M12 3c4 1.4 7 1.2 8 .8v7.4C20 16.2 16.4 19.8 12 21.4 7.6 19.8 4 16.2 4 11.2V3.8c1.2.4 4 .6 8-.8Z" />
+      <circle cx="12" cy="10" r="2" />
+      <path d="M9 16.2c.6-2 1.6-2.8 3-2.8s2.4.8 3 2.8" />
     </svg>
   );
 }
@@ -77,7 +79,7 @@ export default function PfraTrackerPage() {
 
       <header className={styles.nav}>
         <Link className={styles.logo} href="/apps/pfra-tracker">
-          PFRA Tracker
+          PFRA <span>Tracker</span>
         </Link>
         <nav className={styles.navLinks} aria-label="PFRA Tracker">
           <a href="#features">Features</a>
@@ -90,15 +92,18 @@ export default function PfraTrackerPage() {
 
       <section className={styles.hero} id="features">
         <div className={styles.streaks} aria-hidden="true" />
-        <AthleteField />
 
         <div className={styles.heroCopy}>
           <h1 className={styles.headline}>
-            <span>Cardio. Strength. Core.</span>
+            <span>Cardio.</span>
+            <span>Strength.</span>
+            <span>Core.</span>
             <span className={styles.gold}>Know where you stand.</span>
           </h1>
           <p className={styles.tagline}>Track · Score · Pass · Repeat</p>
         </div>
+
+        <AthleteField />
 
         <div className={styles.heroAside}>
           <PhoneMockup />
@@ -123,6 +128,7 @@ export default function PfraTrackerPage() {
               {card.title} <em>Max {card.max}</em>
             </h3>
             <p>{card.events}</p>
+            <CardArt name={card.id} />
             <footer>Max score: {card.max}</footer>
           </article>
         ))}
