@@ -559,7 +559,7 @@
   display: block;
   width: 108px;
   height: 108px;
-  color: rgba(125, 199, 227, 0.42);
+  color: var(--accent);
   pointer-events: none;
 }
 
