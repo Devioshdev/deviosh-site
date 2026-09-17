@@ -288,7 +288,7 @@
     gap:12px;
   }
 
-  /* ====== SERVICES ====== */
+  /* ====== STUDIO ====== */
   .services{
     padding:140px 40px 160px;background:
       radial-gradient(48% 36% at 92% 8%, rgba(216,59,255,.14), transparent 70%),
@@ -357,7 +357,7 @@
   .work-card-p{font-size:16px;line-height:1.55;color:var(--ink-2);max-width:46ch}
   .work-card-link{display:inline-flex;align-items:center;gap:8px;margin-top:18px;font-weight:600;color:var(--green)}
 
-  /* ====== HOW WORK MOVES (PINNED DARK) ====== */
+  /* ====== CRAFT (PINNED DARK) ====== */
   .process{
     position:relative;background:
       radial-gradient(52% 44% at 18% 20%, rgba(22,168,255,.18), transparent 70%),

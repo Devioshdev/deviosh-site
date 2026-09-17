@@ -1,6 +1,6 @@
 # Deviosh Site
 
-Landing page for Deviosh, a founder-led mobile app development studio.
+Marketing site for Deviosh, a founder-led app studio and product brand.
 
 ## Local Preview
 
