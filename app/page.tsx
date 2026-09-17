@@ -2,18 +2,287 @@
 
 import { useEffect } from "react";
 
-const pageMarkup = "<!-- ============ NAV ============ -->\n<nav class=\"nav\" id=\"nav\">\n  <div class=\"brand\"><img src=\"/assets/deviosh-logo-glow.png\" alt=\"Deviosh logo\" /><span>Deviosh</span></div>\n  <div class=\"nav-links\">\n    <a href=\"#work\">Work</a>\n    <a href=\"#services\">Services</a>\n    <a href=\"#process\">Process</a>\n    <a href=\"#contact\">Contact</a>\n  </div>\n  <a href=\"mailto:hello@deviosh.com?subject=Mobile%20app%20project%20inquiry\" class=\"cta-pill\">Start a Project</a>\n</nav>\n\n<!-- ============ HERO ============ -->\n<section class=\"hero\" id=\"hero\">\n  <div>\n    <span class=\"pill\"><span class=\"dot\"></span>AI-powered app development · ship in weeks, not months</span>\n    <h1 class=\"h1\" id=\"heroH1\">\n      <span class=\"word\"><span>Build</span></span>\n      <span class=\"word\"><span>a</span></span>\n      <span class=\"word\"><span>mobile</span></span>\n      <span class=\"word\"><span>app</span></span>\n      <span class=\"word\"><span>people</span></span>\n      <span class=\"word\"><span>can</span></span>\n      <span class=\"word\"><span><em>trust,</em></span></span>\n      <span class=\"word\"><span><em>use,</em></span></span>\n      <span class=\"word\"><span>and <em>grow</em> with.</span></span>\n    </h1>\n    <p class=\"lede\">Deviosh designs, builds, and publishes custom iOS and Android apps using AI throughout the pipeline — so founders get a polished, store-ready product at a fraction of the cost and time of a traditional agency.</p>\n    <div class=\"hero-actions\">\n      <a href=\"mailto:hello@deviosh.com?subject=Mobile%20app%20project%20inquiry\" class=\"btn btn-primary\">Tell me about your app <span class=\"arrow\">→</span></a>\n      <a href=\"https://github.com/devioshdev\" class=\"btn btn-ghost\">View GitHub</a>\n    </div>\n  </div>\n\n  <div class=\"stage\" id=\"heroStage\">\n    <div class=\"blob amber\" data-parallax=\"0.18\"></div>\n    <div class=\"blob forest\" data-parallax=\"-0.12\"></div>\n    <div class=\"phone\" id=\"heroPhone\">\n      <div class=\"phone-screen\">\n        <div class=\"ph-logo\"><img src=\"/assets/deviosh-logo-glow.png\" alt=\"\" /></div>\n        <div class=\"ph-eyebrow\">Product Sprint</div>\n        <div class=\"ph-title\">Launch Board</div>\n        <div class=\"ph-list\" id=\"phList\">\n          <div class=\"ph-item\" data-step=\"0\"><div class=\"num\">1</div><div class=\"label\">Scope the first useful version</div></div>\n          <div class=\"ph-item\" data-step=\"1\"><div class=\"num\">2</div><div class=\"label\">Design the core experience</div></div>\n          <div class=\"ph-item\" data-step=\"2\"><div class=\"num\">3</div><div class=\"label\">Build, test, and iterate</div></div>\n          <div class=\"ph-item\" data-step=\"3\"><div class=\"num\">4</div><div class=\"label\">Ship with store-ready polish</div></div>\n        </div>\n        <div class=\"ph-focus\">\n          <div class=\"lbl\">Current focus</div>\n          <div class=\"body\" id=\"phFocus\">Custom apps, designed and shipped with AI in weeks — not quarters.</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"hero-meta\">\n    <span>From idea to App Store in 4–6 weeks</span>\n    <span>~70% lower cost than a traditional agency</span>\n    <span>AI-accelerated, founder-led</span>\n  </div>\n</section>\n\n<!-- ============ PINNED SHOWCASE ============ -->\n<section class=\"showcase\" id=\"showcase\">\n  <div class=\"showcase-pin\">\n    <div class=\"showcase-bg\"></div>\n    <div class=\"showcase-rule\">\n      <span>Sprint Walkthrough</span>\n      <div class=\"progress\" id=\"showcaseProgress\">\n        <div class=\"seg\" data-i=\"0\"></div>\n        <div class=\"seg\" data-i=\"1\"></div>\n        <div class=\"seg\" data-i=\"2\"></div>\n        <div class=\"seg\" data-i=\"3\"></div>\n      </div>\n    </div>\n\n    <div class=\"showcase-text\">\n      <div class=\"showcase-eyebrow\">Inside the Sprint</div>\n      <div class=\"showcase-stack\" id=\"showcaseStack\" style=\"min-height:460px;width:100%\">\n        <div class=\"showcase-slide active\" data-step=\"0\">\n          <div class=\"showcase-num\">01 · Scope</div>\n          <div class=\"showcase-h\">From a 30-minute call to a costed scope.</div>\n          <div class=\"showcase-p\">AI-assisted scoping turns your idea into a v1 feature list, timeline, and fixed price the same week. No discovery invoices, no four-week kickoff.</div>\n          <div class=\"showcase-tags\"><span class=\"tag\">Same-week scope</span><span class=\"tag\">Fixed price</span><span class=\"tag\">No retainer</span></div>\n        </div>\n        <div class=\"showcase-slide\" data-step=\"1\">\n          <div class=\"showcase-num\">02 · Design</div>\n          <div class=\"showcase-h\">AI-generated UX, hand-finished by a human.</div>\n          <div class=\"showcase-p\">Generative design tools spin up dozens of layouts and brand directions in hours. We curate, refine, and ship a clickable prototype on real devices — usually within the first week.</div>\n          <div class=\"showcase-tags\"><span class=\"tag\">Generative UX</span><span class=\"tag\">Real-device prototype</span><span class=\"tag\">~5 days</span></div>\n        </div>\n        <div class=\"showcase-slide\" data-step=\"2\">\n          <div class=\"showcase-num\">03 · Build</div>\n          <div class=\"showcase-h\">AI-accelerated engineering, on real native code.</div>\n          <div class=\"showcase-p\">Code is generated, reviewed, and tested with AI in the loop — then hardened by hand. You get weekly TestFlight and Play builds, at the fraction of the cost an agency quotes for the same scope.</div>\n          <div class=\"showcase-tags\"><span class=\"tag\">Native iOS &amp; Android</span><span class=\"tag\">Weekly builds</span><span class=\"tag\">~70% lower cost</span></div>\n        </div>\n        <div class=\"showcase-slide\" data-step=\"3\">\n          <div class=\"showcase-num\">04 · Ship</div>\n          <div class=\"showcase-h\">Published to the stores — by us.</div>\n          <div class=\"showcase-p\">We handle App Store and Play submission, AI-generated screenshots and copy, and review responses. You get a published app with release telemetry — typically 4–6 weeks from kickoff.</div>\n          <div class=\"showcase-tags\"><span class=\"tag\">App Store + Play</span><span class=\"tag\">AI store assets</span><span class=\"tag\">Live in 4–6 wks</span></div>\n        </div>\n      </div>\n    </div>\n\n    <div class=\"showcase-stage\" id=\"showcaseStage\">\n      <div class=\"blob amber\" data-parallax=\"0.10\" style=\"left:-20px;top:10%\"></div>\n      <div class=\"blob forest\" data-parallax=\"-0.08\" style=\"right:-20px;bottom:8%\"></div>\n      <div class=\"phone\">\n        <div class=\"phone-screen\">\n          <div class=\"ph-logo\"><img src=\"/assets/deviosh-logo-glow.png\" alt=\"\" /></div>\n        <div class=\"ph-eyebrow\">Product Sprint</div>\n          <div class=\"ph-title\">Launch Board</div>\n          <div class=\"ph-list\" id=\"phListPin\">\n            <div class=\"ph-item\" data-step=\"0\"><div class=\"num\">1</div><div class=\"label\">Scope the first useful version</div></div>\n            <div class=\"ph-item\" data-step=\"1\"><div class=\"num\">2</div><div class=\"label\">Design the core experience</div></div>\n            <div class=\"ph-item\" data-step=\"2\"><div class=\"num\">3</div><div class=\"label\">Build, test, and iterate</div></div>\n            <div class=\"ph-item\" data-step=\"3\"><div class=\"num\">4</div><div class=\"label\">Ship with store-ready polish</div></div>\n          </div>\n          <div class=\"ph-focus\">\n            <div class=\"lbl\">Current focus</div>\n            <div class=\"body\" id=\"phFocusPin\">Custom apps, designed and shipped with AI in weeks — not quarters.</div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- ============ SERVICES ============ -->\n<section class=\"services\" id=\"services\">\n  <div class=\"services-eyebrow reveal\">What Deviosh builds</div>\n  <h2 class=\"services-h reveal\">Custom apps, AI in the pipeline, shipped at startup speed.</h2>\n  <div class=\"cards\">\n    <div class=\"card\" data-anim=\"\">\n      <div class=\"card-glyph\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><rect x=\"6\" y=\"2\" width=\"12\" height=\"20\" rx=\"3\"></rect><path d=\"M10 18h4\"></path></svg></div>\n      <div class=\"card-num\">01</div>\n      <div class=\"card-h\">AI-built MVPs</div>\n      <p class=\"card-p\">Idea to published iOS or Android app in 4–6 weeks. AI handles scoping, design exploration, and code scaffolding — at roughly 30% of a traditional agency quote.</p>\n      <a href=\"mailto:hello@deviosh.com?subject=Sprint%20scope%20inquiry\" class=\"card-arrow\">Sprint scope <span class=\"arrow\">→</span></a>\n    </div>\n    <div class=\"card\" data-anim=\"\">\n      <div class=\"card-glyph\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"><path d=\"M3 12a9 9 0 0 1 15.5-6.3\"></path><path d=\"M21 12a9 9 0 0 1-15.5 6.3\"></path><path d=\"M16 4v5h5\"></path><path d=\"M8 20v-5H3\"></path></svg></div>\n      <div class=\"card-num\">02</div>\n      <div class=\"card-h\">App Modernization</div>\n      <p class=\"card-p\">Refresh an aging app with AI-assisted UX redesign, faster screens, and cleaner code — with a fixed-price scope delivered in days, not a discovery quarter.</p>\n      <a href=\"mailto:hello@deviosh.com?subject=App%20modernization%20audit\" class=\"card-arrow\">Audit &amp; plan <span class=\"arrow\">→</span></a>\n    </div>\n    <div class=\"card\" data-anim=\"\">\n      <div class=\"card-glyph\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M12 3v3\"></path><path d=\"M12 18v3\"></path><path d=\"M3 12h3\"></path><path d=\"M18 12h3\"></path><circle cx=\"12\" cy=\"12\" r=\"4.5\"></circle><path d=\"M12 9.5v2.5l1.8 1\"></path></svg></div>\n      <div class=\"card-num\">03</div>\n      <div class=\"card-h\">In-App AI Features</div>\n      <p class=\"card-p\">Add the AI features your users actually want — chat, summarization, search, smart automations — wired into your app and shipped to the stores by us.</p>\n      <a href=\"mailto:hello@deviosh.com?subject=In-app%20AI%20features\" class=\"card-arrow\">See examples <span class=\"arrow\">→</span></a>\n    </div>\n  </div>\n</section>\n\n<!-- ============ RECENT WORK ============ -->\n<section class=\"work\" id=\"work\">\n  <div class=\"work-eyebrow reveal\">Recent work</div>\n  <h2 class=\"work-h reveal\">The first App Store showcase.</h2>\n  <a class=\"work-card reveal\" href=\"/apps/pfra-tracker\">\n    <div class=\"work-thumb\" aria-hidden=\"true\"><span>86.5</span><em>PFRA</em></div>\n    <div>\n      <div class=\"work-kicker\">PFRA Tracker · iOS</div>\n      <div class=\"work-card-h\">Cardio. Strength. Core.</div>\n      <p class=\"work-card-p\">Know where you stand. A 100-point performance tracker for cardio, strength, core, and body composition — live on the App Store.</p>\n      <span class=\"work-card-link\">View the showcase <span class=\"arrow\">→</span></span>\n    </div>\n  </a>\n</section>\n\n<!-- ============ HOW WORK MOVES (PINNED DARK) ============ -->\n<section class=\"process\" id=\"process\">\n  <div class=\"process-pin\">\n    <div class=\"process-left\">\n      <div>\n        <div class=\"process-eyebrow\">How work moves</div>\n        <h2 class=\"process-h\">A practical path from <span class=\"swap\" id=\"swapHL\">idea</span> to <span class=\"swap\" id=\"swapTL\">shipped app</span>.</h2>\n      </div>\n      <div class=\"process-progress\" id=\"processProgress\">\n        <div class=\"seg\" data-i=\"0\"></div>\n        <div class=\"seg\" data-i=\"1\"></div>\n        <div class=\"seg\" data-i=\"2\"></div>\n        <div class=\"seg\" data-i=\"3\"></div>\n      </div>\n    </div>\n    <div class=\"process-right\" id=\"processRight\">\n      <div class=\"stepcard active\" data-step=\"0\">\n        <div class=\"stepcard-num\">01</div>\n        <div>\n          <div class=\"stepcard-name\">AI-scoped, fixed-price in days</div>\n          <p class=\"stepcard-desc\">A 30-minute intake call plus AI-assisted scoping gives you a costed v1 the same week — no $20k discovery phase, no open-ended retainer.</p>\n        </div>\n        <ul class=\"stepcard-pts\">\n          <li>Costed scope and timeline within 5 working days</li>\n          <li>Fixed price for the v1 — no surprise change orders</li>\n          <li>Typical projects: $12k–$35k vs. agency $80k+</li>\n        </ul>\n      </div>\n      <div class=\"stepcard\" data-step=\"1\">\n        <div class=\"stepcard-num\">02</div>\n        <div>\n          <div class=\"stepcard-name\">Generative design, human-curated</div>\n          <p class=\"stepcard-desc\">AI generates dozens of layout and brand directions overnight. We curate, refine, and hand you a clickable prototype on real devices — usually inside the first week.</p>\n        </div>\n        <ul class=\"stepcard-pts\">\n          <li>Real-device prototype in ~5 days</li>\n          <li>Brand, type, and motion tokens you keep</li>\n          <li>No 4-week design phase — no design retainer</li>\n        </ul>\n      </div>\n      <div class=\"stepcard\" data-step=\"2\">\n        <div class=\"stepcard-num\">03</div>\n        <div>\n          <div class=\"stepcard-name\">AI-accelerated native build</div>\n          <p class=\"stepcard-desc\">Real native iOS and Android code, generated and tested with AI in the loop, then hand-hardened. Weekly TestFlight and Play builds — at the fraction of cost an agency quotes for the same scope.</p>\n        </div>\n        <ul class=\"stepcard-pts\">\n          <li>Native iOS + Android, one owner</li>\n          <li>Weekly TestFlight + Play internal builds</li>\n          <li>~70% lower delivered cost vs. traditional dev</li>\n        </ul>\n      </div>\n      <div class=\"stepcard\" data-step=\"3\">\n        <div class=\"stepcard-num\">04</div>\n        <div>\n          <div class=\"stepcard-name\">We publish it for you</div>\n          <p class=\"stepcard-desc\">App Store and Play submission, AI-generated screenshots and copy, review responses, and a release-health dashboard. Live in the stores 4–6 weeks from kickoff — not 4–6 months.</p>\n        </div>\n        <ul class=\"stepcard-pts\">\n          <li>App Store + Play submission handled by us</li>\n          <li>AI-generated screenshots, copy, and metadata</li>\n          <li>Live in 4–6 weeks — not quarters</li>\n        </ul>\n      </div>\n    </div>\n  </div>\n</section>\n\n<!-- ============ MARQUEE ============ -->\n<div class=\"marquee\" aria-hidden=\"true\">\n  <div class=\"marquee-track\">\n    <span>Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em></span>\n    <span>Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em></span>\n  </div>\n</div>\n\n<!-- ============ CLOSER ============ -->\n<section class=\"closer\" id=\"contact\">\n  <div class=\"closer-blob-1\" data-parallax=\"0.18\"></div>\n  <div class=\"closer-blob-2\" data-parallax=\"-0.14\"></div>\n  <div class=\"closer-grid\">\n    <div>\n      <div class=\"closer-eyebrow reveal\">Start small, build seriously</div>\n      <h2 class=\"closer-h reveal\">Got an app idea? Get a costed scope this week and a published app in weeks.</h2>\n      <p class=\"closer-p reveal\">Send a short note about what you are trying to build. You will work directly with the creator behind Deviosh — same-week scope, fixed price, AI-accelerated delivery.</p>\n    </div>\n    <div class=\"closer-actions reveal\">\n      <a href=\"mailto:hello@deviosh.com?subject=Mobile%20app%20project%20inquiry\" class=\"btn btn-primary\">Contact Deviosh <span class=\"arrow\">→</span></a>\n      <a href=\"/apps/pfra-tracker\" class=\"btn btn-ghost\">Read recent work</a>\n    </div>\n  </div>\n  <div class=\"closer-meta reveal\">\n    <span>Costed scope in 5 working days</span>\n    <span>Fixed price · no retainer</span>\n    <span>Published app in 4–6 weeks</span>\n  </div>\n</section>\n\n<footer>\n  <div>© Deviosh, 2026</div>\n  <div class=\"links\">\n    <a href=\"/apps/pfra-tracker\">PFRA Tracker</a>\n    <a href=\"https://github.com/devioshdev\">GitHub</a>\n    <a href=\"mailto:hello@deviosh.com?subject=Deviosh%20support\">Support</a>\n    <a href=\"mailto:hello@deviosh.com\">hello@deviosh.com</a>\n  </div>\n</footer>";
-const pageScript = "\n(() => {\n  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;\n\n  // ===== READY: trigger hero entry\n  requestAnimationFrame(() => requestAnimationFrame(() => document.body.classList.add('ready')));\n\n  // ===== NAV scroll state\n  const nav = document.getElementById('nav');\n  const process = document.getElementById('process');\n\n  // ===== Reveal-on-scroll for generic .reveal and service cards\n  const io = new IntersectionObserver((entries) => {\n    entries.forEach(e => {\n      if(e.isIntersecting){\n        e.target.classList.add('in');\n        io.unobserve(e.target);\n      }\n    });\n  }, { threshold: 0.18, rootMargin: '0px 0px -8% 0px' });\n  document.querySelectorAll('.reveal, .card[data-anim]').forEach(el => io.observe(el));\n\n  // ===== Showcase scroll-jack: progress through 4 steps\n  const showcase = document.getElementById('showcase');\n  const showcaseSlides = document.querySelectorAll('#showcaseStack .showcase-slide');\n  const showcaseProgress = document.querySelectorAll('#showcaseProgress .seg');\n  const phListPin = document.querySelectorAll('#phListPin .ph-item');\n  const phFocusPin = document.getElementById('phFocusPin');\n  const focusCopy = [\n    'AI-scoped feature list and a fixed price — same week.',\n    'AI-generated UX, hand-finished into a real-device prototype.',\n    'AI-accelerated build of native iOS + Android — at a fraction of agency cost.',\n    'Published to the App Store and Play in 4–6 weeks from kickoff.'\n  ];\n\n  // ===== Process pinned: progress through 4 steps\n  const processRight = document.getElementById('processRight');\n  const stepcards = document.querySelectorAll('#processRight .stepcard');\n  const processProgress = document.querySelectorAll('#processProgress .seg');\n  const swapHL = document.getElementById('swapHL');\n  const swapTL = document.getElementById('swapTL');\n  const headSwaps = [\n    ['idea', 'fixed-price scope'],\n    ['scope', 'AI-designed prototype'],\n    ['prototype', 'native build'],\n    ['build', 'published app']\n  ];\n\n  // ===== Hero phone: highlight a step on a slow loop while in view\n  const heroPhList = document.querySelectorAll('#phList .ph-item');\n  const heroFocus = document.getElementById('phFocus');\n  const heroFocusCopy = [\n    'Custom apps, designed and shipped with AI in weeks — not quarters.',\n    'AI-generated UX. Hand-finished by a human.',\n    'AI-accelerated build. Fraction of agency cost.',\n    'Published to the App Store + Play in 4–6 weeks.'\n  ];\n  let heroLoopActive = true;\n  let heroStep = 0;\n  function setHeroStep(i){\n    heroPhList.forEach(el => {\n      const s = +el.dataset.step;\n      el.classList.toggle('active', s === i);\n      el.classList.toggle('dim', s !== i);\n    });\n    heroFocus.textContent = heroFocusCopy[i];\n  }\n  setHeroStep(0);\n  setInterval(() => {\n    if(prefersReducedMotion || !heroLoopActive) return;\n    heroStep = (heroStep + 1) % 4;\n    setHeroStep(heroStep);\n  }, 2200);\n\n  // pause hero loop when out of view\n  const heroIO = new IntersectionObserver(([e]) => { heroLoopActive = e.isIntersecting; }, { threshold: 0.1 });\n  heroIO.observe(document.getElementById('hero'));\n\n  // ===== Master scroll handler (rAF-batched)\n  let ticking = false;\n  function onScroll(){\n    if(!ticking){\n      requestAnimationFrame(update);\n      ticking = true;\n    }\n  }\n  function clamp(v,a,b){return Math.max(a,Math.min(b,v))}\n  function progressOf(rect, vh){\n    // 0 when section top hits viewport top, 1 when section bottom leaves viewport top\n    const total = rect.height - vh;\n    const traveled = -rect.top;\n    return clamp(traveled / total, 0, 1);\n  }\n\n  function update(){\n    if(prefersReducedMotion){ ticking = false; return; }\n    const sy = window.scrollY;\n    const vh = window.innerHeight;\n\n    // Nav state\n    nav.classList.toggle('scrolled', sy > 40);\n    const procRect = process.getBoundingClientRect();\n    nav.classList.toggle('dark', procRect.top < 60 && procRect.bottom > 80);\n\n    // Hero parallax: shift phone slightly upward + scale on early scroll, parallax blobs\n    const heroRect = document.getElementById('hero').getBoundingClientRect();\n    const heroProg = clamp(-heroRect.top / vh, 0, 1);\n    const heroPhone = document.getElementById('heroPhone');\n    if(heroPhone){\n      heroPhone.style.transform = `translateY(${heroProg * -40}px) scale(${1 - heroProg * 0.05})`;\n    }\n    document.querySelectorAll('[data-parallax]').forEach(el => {\n      const speed = parseFloat(el.dataset.parallax);\n      const r = el.getBoundingClientRect();\n      const center = r.top + r.height/2;\n      const offsetFromCenter = center - vh/2;\n      el.style.transform = `translate3d(0, ${offsetFromCenter * speed * -0.25}px, 0)`;\n    });\n\n    // Showcase progress\n    const sRect = showcase.getBoundingClientRect();\n    if(sRect.top <= 0 && sRect.bottom > vh){\n      const p = progressOf(sRect, vh);\n      const idx = clamp(Math.floor(p * 4), 0, 3);\n      const segP = clamp((p * 4) - idx, 0, 1);\n      // slide\n      showcaseSlides.forEach((el, i) => el.classList.toggle('active', i === idx));\n      // phone steps\n      phListPin.forEach((el, i) => {\n        el.classList.toggle('active', i === idx);\n        el.classList.toggle('dim', i !== idx);\n      });\n      phFocusPin.textContent = focusCopy[idx];\n      // progress segments\n      showcaseProgress.forEach((seg, i) => {\n        seg.classList.toggle('done', i < idx);\n        seg.classList.toggle('active', i === idx);\n        if(i === idx) seg.style.setProperty('--p', segP);\n        else if(i < idx) seg.style.setProperty('--p', 1);\n        else seg.style.setProperty('--p', 0);\n      });\n    }\n\n    // Process progress\n    const pRect = process.getBoundingClientRect();\n    if(pRect.top <= 0 && pRect.bottom > vh){\n      const p = progressOf(pRect, vh);\n      const idx = clamp(Math.floor(p * 4), 0, 3);\n      const segP = clamp((p * 4) - idx, 0, 1);\n      stepcards.forEach((el, i) => el.classList.toggle('active', i === idx));\n      processProgress.forEach((seg, i) => {\n        seg.classList.toggle('done', i < idx);\n        seg.classList.toggle('active', i === idx);\n        if(i === idx) seg.style.setProperty('--p', segP);\n        else if(i < idx) seg.style.setProperty('--p', 1);\n        else seg.style.setProperty('--p', 0);\n      });\n      if(swapHL.dataset.cur !== String(idx)){\n        swapHL.dataset.cur = idx;\n        swapTL.dataset.cur = idx;\n        swapHL.textContent = headSwaps[idx][0];\n        swapTL.textContent = headSwaps[idx][1];\n      }\n    }\n\n    ticking = false;\n  }\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  update();\n})();\n";
+const pageMarkup = `
+<nav class="nav" id="nav">
+  <a class="brand" href="/"><img src="/assets/deviosh-logo-glow.png" alt="Deviosh logo" /><span>Deviosh</span></a>
+  <div class="nav-links">
+    <a href="#work">Apps</a>
+    <a href="#studio">Studio</a>
+    <a href="#craft">Craft</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <a href="mailto:hello@deviosh.com?subject=Talk%20apps" class="cta-pill">Say hello</a>
+</nav>
+
+<section class="hero" id="hero">
+  <div>
+    <span class="pill"><span class="dot"></span>Founder-led app studio · building and shipping products</span>
+    <h1 class="h1" id="heroH1">
+      <span class="word"><span>We</span></span>
+      <span class="word"><span>build</span></span>
+      <span class="word"><span>mobile</span></span>
+      <span class="word"><span>apps</span></span>
+      <span class="word"><span>people</span></span>
+      <span class="word"><span>can</span></span>
+      <span class="word"><span><em>trust,</em></span></span>
+      <span class="word"><span><em>use,</em></span></span>
+      <span class="word"><span>and <em>grow</em> with.</span></span>
+    </h1>
+    <p class="lede">Deviosh is a founder-led product brand. We design, build, and ship iOS and Android apps — craft in the product, from first sketch to the App Store.</p>
+    <div class="hero-actions">
+      <a href="mailto:hello@deviosh.com?subject=Talk%20apps" class="btn btn-primary">Say hello <span class="arrow">→</span></a>
+      <a href="/apps/pfra-tracker" class="btn btn-ghost">See PFRA Tracker</a>
+    </div>
+  </div>
+
+  <div class="stage" id="heroStage">
+    <div class="blob amber" data-parallax="0.18"></div>
+    <div class="blob forest" data-parallax="-0.12"></div>
+    <div class="phone" id="heroPhone">
+      <div class="phone-screen">
+        <div class="ph-logo"><img src="/assets/deviosh-logo-glow.png" alt="" /></div>
+        <div class="ph-eyebrow">Studio</div>
+        <div class="ph-title">Build Board</div>
+        <div class="ph-list" id="phList">
+          <div class="ph-item" data-step="0"><div class="num">1</div><div class="label">Shape the first useful version</div></div>
+          <div class="ph-item" data-step="1"><div class="num">2</div><div class="label">Design the core experience</div></div>
+          <div class="ph-item" data-step="2"><div class="num">3</div><div class="label">Build, test, and iterate</div></div>
+          <div class="ph-item" data-step="3"><div class="num">4</div><div class="label">Ship with store-ready polish</div></div>
+        </div>
+        <div class="ph-focus">
+          <div class="lbl">Current focus</div>
+          <div class="body" id="phFocus">Apps designed and shipped by the studio — products people can actually use.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-meta">
+    <span>Founder-led studio</span>
+    <span>Native iOS &amp; Android</span>
+    <span>Live on the App Store</span>
+  </div>
+</section>
+
+<section class="work" id="work">
+  <div class="work-eyebrow reveal">Apps</div>
+  <h2 class="work-h reveal">Shipped, live, and ours.</h2>
+  <a class="work-card reveal" href="/apps/pfra-tracker">
+    <div class="work-thumb" aria-hidden="true"><span>86.5</span><em>PFRA</em></div>
+    <div>
+      <div class="work-kicker">PFRA Tracker · iOS</div>
+      <div class="work-card-h">Cardio. Strength. Core.</div>
+      <p class="work-card-p">Know where you stand. A 100-point performance tracker for cardio, strength, core, and body composition — live on the App Store.</p>
+      <span class="work-card-link">View the showcase <span class="arrow">→</span></span>
+    </div>
+  </a>
+</section>
+
+<section class="showcase" id="showcase">
+  <div class="showcase-pin">
+    <div class="showcase-bg"></div>
+    <div class="showcase-rule">
+      <span>How we ship</span>
+      <div class="progress" id="showcaseProgress">
+        <div class="seg" data-i="0"></div>
+        <div class="seg" data-i="1"></div>
+        <div class="seg" data-i="2"></div>
+        <div class="seg" data-i="3"></div>
+      </div>
+    </div>
+
+    <div class="showcase-text">
+      <div class="showcase-eyebrow">Inside the studio</div>
+      <div class="showcase-stack" id="showcaseStack" style="min-height:460px;width:100%">
+        <div class="showcase-slide active" data-step="0">
+          <div class="showcase-num">01 · Shape</div>
+          <div class="showcase-h">Start with the first useful version.</div>
+          <div class="showcase-p">Every Deviosh app begins as a tight product — the smallest version that is still worth shipping — then the design and the build grow around that.</div>
+          <div class="showcase-tags"><span class="tag">First useful version</span><span class="tag">Product sense</span><span class="tag">Studio-led</span></div>
+        </div>
+        <div class="showcase-slide" data-step="1">
+          <div class="showcase-num">02 · Design</div>
+          <div class="showcase-h">AI-generated UX, hand-finished by a human.</div>
+          <div class="showcase-p">Generative tools explore layouts and brand directions quickly. We curate, refine, and put a prototype on a real device before the product hardens.</div>
+          <div class="showcase-tags"><span class="tag">Generative UX</span><span class="tag">Real-device prototype</span><span class="tag">Human-finished</span></div>
+        </div>
+        <div class="showcase-slide" data-step="2">
+          <div class="showcase-num">03 · Build</div>
+          <div class="showcase-h">Native code, made in the studio.</div>
+          <div class="showcase-p">Real iOS and Android — generated, reviewed, and tested with AI in the loop, then hardened by hand. Weekly TestFlight and Play builds as the product takes shape.</div>
+          <div class="showcase-tags"><span class="tag">Native iOS &amp; Android</span><span class="tag">Weekly builds</span><span class="tag">Hand-hardened</span></div>
+        </div>
+        <div class="showcase-slide" data-step="3">
+          <div class="showcase-num">04 · Ship</div>
+          <div class="showcase-h">Live in the stores, used in the wild.</div>
+          <div class="showcase-p">Apps leave the studio through the App Store and Play — screenshots, copy, review, and a listing people can actually open.</div>
+          <div class="showcase-tags"><span class="tag">App Store + Play</span><span class="tag">Store-ready polish</span><span class="tag">Shipped products</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="showcase-stage" id="showcaseStage">
+      <div class="blob amber" data-parallax="0.10" style="left:-20px;top:10%"></div>
+      <div class="blob forest" data-parallax="-0.08" style="right:-20px;bottom:8%"></div>
+      <div class="phone">
+        <div class="phone-screen">
+          <div class="ph-logo"><img src="/assets/deviosh-logo-glow.png" alt="" /></div>
+        <div class="ph-eyebrow">Studio</div>
+          <div class="ph-title">Build Board</div>
+          <div class="ph-list" id="phListPin">
+            <div class="ph-item" data-step="0"><div class="num">1</div><div class="label">Shape the first useful version</div></div>
+            <div class="ph-item" data-step="1"><div class="num">2</div><div class="label">Design the core experience</div></div>
+            <div class="ph-item" data-step="2"><div class="num">3</div><div class="label">Build, test, and iterate</div></div>
+            <div class="ph-item" data-step="3"><div class="num">4</div><div class="label">Ship with store-ready polish</div></div>
+          </div>
+          <div class="ph-focus">
+            <div class="lbl">Current focus</div>
+            <div class="body" id="phFocusPin">Apps designed and shipped by the studio — products people can actually use.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="studio">
+  <div class="services-eyebrow reveal">The studio</div>
+  <h2 class="services-h reveal">App development as craft.</h2>
+  <div class="cards">
+    <div class="card" data-anim="">
+      <div class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><rect x="6" y="2" width="12" height="20" rx="3"></rect><path d="M10 18h4"></path></svg></div>
+      <div class="card-num">01</div>
+      <div class="card-h">Native products</div>
+      <p class="card-p">iOS and Android apps designed and shipped by Deviosh — real native code, store-ready polish, and a listing people can open today.</p>
+    </div>
+    <div class="card" data-anim="">
+      <div class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 12a9 9 0 0 1 15.5-6.3"></path><path d="M21 12a9 9 0 0 1-15.5 6.3"></path><path d="M16 4v5h5"></path><path d="M8 20v-5H3"></path></svg></div>
+      <div class="card-num">02</div>
+      <div class="card-h">Brand in the product</div>
+      <p class="card-p">Type, motion, and interface as one system — so the app feels like it belongs to a brand, not a template.</p>
+    </div>
+    <div class="card" data-anim="">
+      <div class="card-glyph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3"></path><path d="M12 18v3"></path><path d="M3 12h3"></path><path d="M18 12h3"></path><circle cx="12" cy="12" r="4.5"></circle><path d="M12 9.5v2.5l1.8 1"></path></svg></div>
+      <div class="card-num">03</div>
+      <div class="card-h">Intelligence in the app</div>
+      <p class="card-p">Features that help people inside the product — search, summaries, guidance — wired into the experience, not bolted on.</p>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="craft">
+  <div class="process-pin">
+    <div class="process-left">
+      <div>
+        <div class="process-eyebrow">How apps get made</div>
+        <h2 class="process-h">A practical path from <span class="swap" id="swapHL">idea</span> to <span class="swap" id="swapTL">shipped app</span>.</h2>
+      </div>
+      <div class="process-progress" id="processProgress">
+        <div class="seg" data-i="0"></div>
+        <div class="seg" data-i="1"></div>
+        <div class="seg" data-i="2"></div>
+        <div class="seg" data-i="3"></div>
+      </div>
+    </div>
+    <div class="process-right" id="processRight">
+      <div class="stepcard active" data-step="0">
+        <div class="stepcard-num">01</div>
+        <div>
+          <div class="stepcard-name">Shape the first version</div>
+          <p class="stepcard-desc">Find what is actually useful. A tight v1 — not a wish list — so design and engineering have something real to build toward.</p>
+        </div>
+        <ul class="stepcard-pts">
+          <li>The smallest version worth shipping</li>
+          <li>A clear path to the stores</li>
+          <li>Studio-owned product decisions</li>
+        </ul>
+      </div>
+      <div class="stepcard" data-step="1">
+        <div class="stepcard-num">02</div>
+        <div>
+          <div class="stepcard-name">Design, then put it on a device</div>
+          <p class="stepcard-desc">AI explores layouts and brand directions. We curate, refine, and hand-finish a clickable prototype on real hardware.</p>
+        </div>
+        <ul class="stepcard-pts">
+          <li>Real-device prototype</li>
+          <li>Brand, type, and motion as one system</li>
+          <li>Human-finished UX</li>
+        </ul>
+      </div>
+      <div class="stepcard" data-step="2">
+        <div class="stepcard-num">03</div>
+        <div>
+          <div class="stepcard-name">Native build</div>
+          <p class="stepcard-desc">Real iOS and Android — generated and tested with AI in the loop, then hardened by hand. Weekly TestFlight and Play builds as the product takes shape.</p>
+        </div>
+        <ul class="stepcard-pts">
+          <li>Native iOS + Android</li>
+          <li>Weekly TestFlight + Play builds</li>
+          <li>Hand-hardened code</li>
+        </ul>
+      </div>
+      <div class="stepcard" data-step="3">
+        <div class="stepcard-num">04</div>
+        <div>
+          <div class="stepcard-name">Ship it</div>
+          <p class="stepcard-desc">Store submission, screenshots, copy, and a live listing. The work is done when people can open the app — not when a deck says it is.</p>
+        </div>
+        <ul class="stepcard-pts">
+          <li>App Store + Play submission from the studio</li>
+          <li>Screenshots, copy, and metadata</li>
+          <li>A product people can use</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em></span>
+    <span>Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em> Trust <em>●</em> Use <em>●</em> Grow <em>●</em></span>
+  </div>
+</div>
+
+<section class="closer" id="contact">
+  <div class="closer-blob-1" data-parallax="0.18"></div>
+  <div class="closer-blob-2" data-parallax="-0.14"></div>
+  <div class="closer-grid">
+    <div>
+      <div class="closer-eyebrow reveal">Talk apps</div>
+      <h2 class="closer-h reveal">Building something? Say hello.</h2>
+      <p class="closer-p reveal">You will hear from the founder behind Deviosh. Apps, brand, and the craft of shipping — if you want to talk, write.</p>
+    </div>
+    <div class="closer-actions reveal">
+      <a href="mailto:hello@deviosh.com?subject=Talk%20apps" class="btn btn-primary">Say hello <span class="arrow">→</span></a>
+      <a href="/apps/pfra-tracker" class="btn btn-ghost">See PFRA Tracker</a>
+    </div>
+  </div>
+  <div class="closer-meta reveal">
+    <span>Founder-led</span>
+    <span>App Store products</span>
+    <span>hello@deviosh.com</span>
+  </div>
+</section>
+
+<footer>
+  <div>© Deviosh, 2026</div>
+  <div class="links">
+    <a href="/apps/pfra-tracker">PFRA Tracker</a>
+    <a href="https://github.com/devioshdev">GitHub</a>
+    <a href="mailto:hello@deviosh.com?subject=Deviosh%20support">Support</a>
+    <a href="mailto:hello@deviosh.com">hello@deviosh.com</a>
+  </div>
+</footer>
+`;
 
 export default function Home() {
   useEffect(() => {
-    void pageScript;
-
     const prefersReducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
     const nav = document.getElementById("nav");
-    const process = document.getElementById("process");
+    const process = document.getElementById("craft");
     const showcase = document.getElementById("showcase");
     const hero = document.getElementById("hero");
     const heroPhone = document.getElementById("heroPhone") as HTMLElement | null;
@@ -55,20 +324,20 @@ export default function Home() {
       .forEach((el) => io.observe(el));
 
     const heroFocusCopy = [
-      "Custom apps, designed and shipped with AI in weeks — not quarters.",
+      "Apps designed and shipped by the studio — products people can actually use.",
       "AI-generated UX. Hand-finished by a human.",
-      "AI-accelerated build. Fraction of agency cost.",
-      "Published to the App Store + Play in 4–6 weeks.",
+      "Native iOS and Android. Built in the studio.",
+      "Published to the App Store — and used in the wild.",
     ];
     const focusCopy = [
-      "AI-scoped feature list and a fixed price — same week.",
+      "Shape the first useful version — then design around it.",
       "AI-generated UX, hand-finished into a real-device prototype.",
-      "AI-accelerated build of native iOS + Android — at a fraction of agency cost.",
-      "Published to the App Store and Play in 4–6 weeks from kickoff.",
+      "Native iOS and Android, built and tested in the studio.",
+      "Published to the App Store, then lived in by real people.",
     ];
     const headSwaps = [
-      ["idea", "fixed-price scope"],
-      ["scope", "AI-designed prototype"],
+      ["idea", "first version"],
+      ["shape", "prototype"],
       ["prototype", "native build"],
       ["build", "published app"],
     ];
