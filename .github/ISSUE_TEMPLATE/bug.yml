@@ -1,0 +1,39 @@
+name: Bug
+description: Something on the Deviosh site is wrong
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For the public studio site (homepage, PFRA Tracker page, SEO/metadata).
+        App Store listing issues belong in App Store Connect, not here.
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Surface
+      options:
+        - Homepage
+        - PFRA Tracker page
+        - Metadata / SEO
+        - CI / docs
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened
+      description: Expected vs actual. Include the URL if you have it.
+      placeholder: On https://www.deviosh.com/… I expected … but saw …
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / device
+      placeholder: Safari 18 on iPhone, Chrome on macOS, …
+  - type: textarea
+    id: extra
+    attributes:
+      label: Extra
+      description: Screenshots, repro steps, or anything else useful.
